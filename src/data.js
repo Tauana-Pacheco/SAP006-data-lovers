@@ -24,8 +24,8 @@ export const sortData = (data, sortBy, sortOrder) => {
       function (a, b) {
         if (a[sortBy] > b[sortBy])
           return -1;
-        if (a[sortBy] < b[sortBy])
-          return 1;
+        // if (a[sortBy] < b[sortBy])
+        //   return 1;
       }
     )
   }
