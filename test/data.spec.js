@@ -44,21 +44,23 @@ describe('filterData', () => {
 });
 
 describe('average', () => {
-  const averagePokemon = [{
+  const Pokemons = [{
     "stats": {
       "base-defense": "1", "base-attack": "2", "base-stamina": "3",
     }
-    
   }]
-  // console.log(averagePokemon[0].stats["base-defense"]);
 
   it('is a function', () => {
     expect(typeof average).toBe('function');
   });
 
   it('returns ``', () => {
-    console.log(average(averagePokemon))
-    expect(average(averagePokemon)).toEqual(averagePokemon(2));
-    
-  })
-})  
+    const averagePokemon = average(Pokemons)
+    const expectedResult = [{
+      "stats": {
+        "base-defense": "1", "base-attack": "2", "base-stamina": "3", medCal: 2
+      }
+    }]
+    expect(averagePokemon).toEqual(expectedResult)
+  });
+});

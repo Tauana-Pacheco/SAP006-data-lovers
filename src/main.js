@@ -1,8 +1,10 @@
-import { filterData, sortData} from './data.js';
+import { filterData, sortData, average } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
 let POKEMONS = data.pokemon;
+const medcalPokemons = average(POKEMONS);
+console.log(medcalPokemons)
 
 function exibir(itens) {
   document.getElementById("listaPokemon").innerHTML = "";

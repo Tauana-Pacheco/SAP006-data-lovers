@@ -24,8 +24,8 @@ export const sortData = (data, sortBy, sortOrder) => {
       function (a, b) {
         if (a[sortBy] > b[sortBy])
           return -1;
-        // if (a[sortBy] < b[sortBy])
-        //   return 1;
+        //  if (a[sortBy] < b[sortBy])
+        //    return 1;
       }
     )
   }
@@ -33,8 +33,10 @@ export const sortData = (data, sortBy, sortOrder) => {
 }
 
 export const average = function (data) {
-  data.map(function (item) {
-    let medCal = (parseInt(item.stats["base-attack"])) + parseInt(item.stats["base-defense"]) + parseInt(item.stats["base-stamina"]) / 3
-    return medCal
+  const pokemonsMedCal = data.map(function (item) {
+    let medCal = ((parseInt(item.stats["base-attack"])) + parseInt(item.stats["base-defense"]) + parseInt(item.stats["base-stamina"]))/ 3
+    item.stats.medCal = medCal
+    return item
   })
+  return pokemonsMedCal
 }
