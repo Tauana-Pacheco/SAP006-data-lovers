@@ -8,11 +8,28 @@ const medcalPokemons = average(POKEMONS);
 console.log(medcalPokemons)
 
 function exibir(itens) {
+  
   document.getElementById("listaPokemon").innerHTML = "";
   for (let pokemon of itens) {
-    let imagem = document.createElement("img");
-    imagem.src = pokemon.img
-    document.getElementById("listaPokemon").appendChild(imagem)
+    
+    const card = `<section  id = "card" class ="card fire">
+    <div class = "titulos">
+      <p id = "namePok"> ${pokemon.name}</p>
+      <p id = "num"> ${pokemon.num}</p>
+    </div>
+    <img id = "img" src = "${pokemon.img}">
+    <div class = "tipos">
+      <p> ${pokemon.type} </p>
+    </div>
+    <div class = "indices">
+      <p> ⚔️${pokemon.stats["base-attack"]} </p>
+      <p> 🛡️${pokemon.stats["base-defense"]} </p>
+      <p> ❤️${pokemon.stats["base-stamina"]} </p>
+    </div>
+    <p> 📊Media</p>
+  </section>`
+    
+    document.getElementById("listaPokemon").innerHTML += card
   }
 }
 exibir(POKEMONS)
@@ -40,4 +57,5 @@ order.addEventListener("change", function (e) {
   const sortnames = sortData(POKEMONS, orderValues[0], orderValues[1]);
   exibir(sortnames);
 });
+
 
