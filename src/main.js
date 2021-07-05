@@ -1,11 +1,11 @@
 import { filterData, sortData, average } from './data.js';
 import data from './data/pokemon/pokemon.js';
-//import { media } from './data.js';
+
 
 
 let POKEMONS = data.pokemon;
-const medcalPokemons = average(POKEMONS);
-console.log(medcalPokemons)
+average(POKEMONS);
+
 
 function exibir(itens) {
   
@@ -26,7 +26,7 @@ function exibir(itens) {
       <p> 🛡️${pokemon.stats["base-defense"]} </p>
       <p> ❤️${pokemon.stats["base-stamina"]} </p>
     </div>
-    <p> 📊Media</p>
+    <p> 📊 ${pokemon.stats["medCal"]} </p>
   </section>`
     
     document.getElementById("listaPokemon").innerHTML += card
@@ -59,3 +59,30 @@ order.addEventListener("change", function (e) {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+const buscaData = function (data, campoBusca) {
+  const pokBusca = data.filter(
+    function (pokemon) {
+      return pokemon.name.includes(campoBusca)
+    });
+  return pokBusca;
+}
+
+let botao = document.getElementById("btnBusca")
+botao.addEventListener("click", function(event){
+  let valorInput = document.getElementById("campoBusca").value
+  let resulBusca = buscaData(data.pokemon, valorInput)
+  console.log(buscaData(data.pokemon, valorInput))
+  exibir(resulBusca)
+  event.preventDefault();
+})

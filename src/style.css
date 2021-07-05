@@ -77,3 +77,69 @@ select {
   justify-content: center;
   text-transform: capitalize;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#campoBusca {
+  border: 1px solid rgba(194, 116, 15, 0.952);
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
+  padding: 1px;
+}
+#btnBusca {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(194, 116, 15, 0.952);
+  padding: 0px;
+  width: 40px;
+  margin-right: 30px;
+}
