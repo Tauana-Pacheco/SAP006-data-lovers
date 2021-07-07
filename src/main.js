@@ -78,8 +78,8 @@ button.addEventListener("click", function(){
   
 })
 
-let btnHome = document.getElementById("btnHome")
-btnHome.addEventListener("click", function(){
+const btHome = document.getElementById("btnHome")
+btHome.addEventListener("click", function(){
   finalArray = 20
   show(POKEMONS.slice(0,finalArray))
 })
