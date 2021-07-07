@@ -39,7 +39,7 @@ describe('filterData', () => {
   });
 
   it('returns ``', () => {
-    expect(filterData(typesPokemon, "grass")).toEqual(expect.not.arrayContaining([{ name: "pikachu", type: "eletric" }]));
+    expect(filterData(typesPokemon, "grass")).toEqual([{ name: "bulbasaur", type: "grass" }, { name: "ivysaur", type: "grass" }]);
   });
 });
 
@@ -58,7 +58,7 @@ describe('average', () => {
     const averagePokemon = average(Pokemons)
     const expectedResult = [{
       "stats": {
-        "base-defense": "1", "base-attack": "2", "base-stamina": "3", medCal: 2
+        "base-defense": "1", "base-attack": "2", "base-stamina": "3", "medCal": "2.00"
       }
     }]
     expect(averagePokemon).toEqual(expectedResult)
