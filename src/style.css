@@ -15,7 +15,7 @@ body {
   width: 50%;
 }
 
-form {
+nav {
   margin-bottom: 30px;
   text-align: center;
 }
@@ -127,7 +127,7 @@ select {
 
 
 
-#campoBusca {
+#search {
   border: 1px solid rgba(194, 116, 15, 0.952);
   border-radius: 10px;
   height: 40px;
@@ -135,11 +135,45 @@ select {
   font-size: 18px;
   padding: 1px;
 }
-#btnBusca {
+#btnSearch {
   height: 40px;
   border-radius: 10px;
   border: 1px solid rgba(194, 116, 15, 0.952);
   padding: 0px;
   width: 40px;
   margin-right: 30px;
+  background-color: rgba(184, 135, 11, 0.455);
+}
+#btnHome {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(194, 116, 15, 0.952);
+  padding: 0px;
+  width: 40px;
+  margin-right: 30px;
+  background-color: rgba(184, 135, 11, 0.455);
+}
+#btnShowMore {
+  text-align: center;
+  font-size: larger;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid rgba(194, 116, 15, 0.952);
+  padding: 0px;
+  width: 200px;
+  background-color: rgba(184, 135, 11, 0.455);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+#btnShowAll {
+  text-align: center;
+  font-size: larger;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid rgba(194, 116, 15, 0.952);
+  padding: 0px;
+  width: 200px;
+  background-color: rgba(184, 135, 11, 0.455);
+  font-weight: bold;
+  text-transform: capitalize;
 }

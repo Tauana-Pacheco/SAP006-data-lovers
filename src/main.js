@@ -2,14 +2,16 @@ import { filterData, sortData, average } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
-
+let finalArray = 4;
 let POKEMONS = data.pokemon;
 average(POKEMONS);
+show(POKEMONS.slice(0,finalArray)) 
 
 
-function exibir(itens) {
-  
-  document.getElementById("listaPokemon").innerHTML = "";
+
+    
+function show(itens) {
+   document.getElementById("listaPokemon").innerHTML = "";
   for (let pokemon of itens) {
     
     const card = `<section  id = "card" class ="card fire">
@@ -32,7 +34,7 @@ function exibir(itens) {
     document.getElementById("listaPokemon").innerHTML += card
   }
 }
-exibir(POKEMONS)
+
 
 
 const type = document.getElementById('type');
@@ -44,7 +46,7 @@ type.addEventListener("change", function () {
   else {
     POKEMONS = data.pokemon;
   }
-  exibir(POKEMONS)
+  show(POKEMONS)
 });
 
 
@@ -55,34 +57,36 @@ order.addEventListener("change", function (e) {
 
   const orderValues = order.value.split("/");
   const sortnames = sortData(POKEMONS, orderValues[0], orderValues[1]);
-  exibir(sortnames);
+  show(sortnames);
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-const buscaData = function (data, campoBusca) {
-  const pokBusca = data.filter(
+const buscaData = function (data, search) {
+  const pokSearch = data.filter(
     function (pokemon) {
-      return pokemon.name.includes(campoBusca)
+      return pokemon.name.includes(search)
     });
-  return pokBusca;
+  return pokSearch;
 }
 
-let botao = document.getElementById("btnBusca")
+let botao = document.getElementById("btnSearch")
 botao.addEventListener("click", function(event){
-  let valorInput = document.getElementById("campoBusca").value
-  let resulBusca = buscaData(data.pokemon, valorInput)
-  console.log(buscaData(data.pokemon, valorInput))
-  exibir(resulBusca)
+  let valorInput = document.getElementById("search").value
+  let resulSearch = buscaData(data.pokemon, valorInput)
+  
+  show(resulSearch)
   event.preventDefault();
 })
+
+let btnHome = document.getElementById("btnHome")
+btnHome.addEventListener("click", function(){
+  finalArray = 4
+  show(POKEMONS.slice(0,finalArray))
+})
+document.getElementById("btnShowMore").addEventListener("click", function(){
+  finalArray += 4
+  show(POKEMONS.slice(0,finalArray))
+});
+document.getElementById("btnShowAll").addEventListener("click", function(){
+  show(POKEMONS)
+});
