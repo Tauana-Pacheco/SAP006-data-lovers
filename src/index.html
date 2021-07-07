@@ -14,10 +14,10 @@
     <img src = "image/logopoke.png" alt="Logo Pokemon">
   </header>
 
-  <form action="">
+  <nav>
     <label for="">Pesquisar Pokemon</label>
-    <input type="text" id="campoBusca">
-    <button id="btnBusca" >🔍</button>
+    <input type="text" id="search">
+    <button id="btnSearch" >🔍</button>
 
     <label for="">Filtro</label>
     <select name="" id="type">
@@ -48,7 +48,11 @@
       <option value="name/asc">Nome-AZ</option>
       <option value="name/desc">Nome-ZA</option>
     </select>
-  </form>
+
+    <label for="">Home</label>
+    <button id="btnHome">🏠</button>
+    
+  </nav>
   <section id = "listaPokemon">
     <section  id = "card" class ="card">
       <div class = "titulos">
@@ -67,6 +71,12 @@
       <p></p>
     </section>
   </section>
+
+  <label for=""></label>
+  <button id="btnShowMore">Mostrar Mais</button>
+  <label for=""></label>
+  <button id="btnShowAll">Mostrar Tudo</button>
+
   <script src = "main.js" type = "module"></script>
 </body>
 
