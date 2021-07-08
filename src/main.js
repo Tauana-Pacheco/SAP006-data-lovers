@@ -3,7 +3,7 @@ import data from './data/pokemon/pokemon.js';
 
 
 let finalArray = 20;
-let POKEMONS = data.pokemon;
+const POKEMONS = data.pokemon;
 average(POKEMONS);
 show(POKEMONS.slice(0,finalArray)) 
 
@@ -40,13 +40,14 @@ function show(itens) {
 const type = document.getElementById('type');
 
 type.addEventListener("change", function () {
+  let filteredPokemons;
   if (type.value !== "") {
-    POKEMONS = filterData(data.pokemon, type.value)
+    filteredPokemons = filterData(POKEMONS, type.value)
   }
   else {
-    POKEMONS = data.pokemon;
+    filteredPokemons = POKEMONS;
   }
-  show(POKEMONS)
+  show(filteredPokemons)
 });
 
 
@@ -78,8 +79,7 @@ button.addEventListener("click", function(){
   
 })
 
-const btHome = document.getElementById("btnHome")
-btHome.addEventListener("click", function(){
+document.getElementById("btnHome").addEventListener("click", function(){
   finalArray = 20
   show(POKEMONS.slice(0,finalArray))
 })
