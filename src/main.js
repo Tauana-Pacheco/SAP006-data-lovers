@@ -2,8 +2,8 @@ import { filterData, sortData, average } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
-let finalArray = 4;
-let POKEMONS = data.pokemon;
+let finalArray = 20;
+const POKEMONS = data.pokemon;
 average(POKEMONS);
 show(POKEMONS.slice(0,finalArray)) 
 
@@ -40,13 +40,14 @@ function show(itens) {
 const type = document.getElementById('type');
 
 type.addEventListener("change", function () {
+  let filteredPokemons;
   if (type.value !== "") {
-    POKEMONS = filterData(data.pokemon, type.value)
+    filteredPokemons = filterData(POKEMONS, type.value)
   }
   else {
-    POKEMONS = data.pokemon;
+    filteredPokemons = POKEMONS;
   }
-  show(POKEMONS)
+  show(filteredPokemons)
 });
 
 
@@ -69,22 +70,21 @@ const buscaData = function (data, search) {
   return pokSearch;
 }
 
-let botao = document.getElementById("btnSearch")
-botao.addEventListener("click", function(event){
+let button = document.getElementById("btnSearch")
+button.addEventListener("click", function(){
   let valorInput = document.getElementById("search").value
   let resulSearch = buscaData(data.pokemon, valorInput)
   
   show(resulSearch)
-  event.preventDefault();
+  
 })
 
-let btnHome = document.getElementById("btnHome")
-btnHome.addEventListener("click", function(){
-  finalArray = 4
+document.getElementById("btnHome").addEventListener("click", function(){
+  finalArray = 20
   show(POKEMONS.slice(0,finalArray))
 })
 document.getElementById("btnShowMore").addEventListener("click", function(){
-  finalArray += 4
+  finalArray += 20
   show(POKEMONS.slice(0,finalArray))
 });
 document.getElementById("btnShowAll").addEventListener("click", function(){

@@ -8,7 +8,7 @@ export const filterData = function (data, typeselect) {
 }
 
 export const sortData = (data, sortBy, sortOrder) => {
-  const allpokemons = data;
+  const allpokemons = data.slice();
 
   if (sortOrder === 'asc') {
     allpokemons.sort(
