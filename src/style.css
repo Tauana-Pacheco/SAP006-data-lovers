@@ -41,7 +41,17 @@ select {
   justify-content: space-evenly;
 }
 
-.card {
+.card-container {
+  box-sizing: border-box;
+  width: 300px;
+  height: 400;
+  background-color: rgb(241, 241, 66);
+  border-radius: 10px;
+  border: 10px solid rgba(184, 135, 11, 0.455);
+  margin: 30px 10px;
+}
+
+.card-back {
   box-sizing: border-box;
   width: 300px;
   height: 400;
@@ -79,8 +89,10 @@ select {
   text-transform: capitalize;
 }
 
-
-
+.fas {
+  font-size: 20px;
+  color: rgba(194, 116, 15, 0.952);
+}
 
 
 

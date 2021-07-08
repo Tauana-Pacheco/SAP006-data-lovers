@@ -5,33 +5,39 @@ import data from './data/pokemon/pokemon.js';
 let finalArray = 20;
 const POKEMONS = data.pokemon;
 average(POKEMONS);
-show(POKEMONS.slice(0,finalArray)) 
+show(POKEMONS.slice(0, finalArray))
 
 
 
-    
+
 function show(itens) {
-   document.getElementById("listaPokemon").innerHTML = "";
+  document.getElementById("listaPokemon").innerHTML = "";
   for (let pokemon of itens) {
-    
-    const card = `<section  id = "card" class ="card fire">
-    <div class = "titulos">
-      <p id = "namePok"> ${pokemon.name}</p>
-      <p id = "num"> ${pokemon.num}</p>
-    </div>
-    <img id = "img" src = "${pokemon.img}">
-    <div class = "tipos">
-      <p> ${pokemon.type} </p>
-    </div>
-    <div class = "indices">
-      <p> ⚔️${pokemon.stats["base-attack"]} </p>
-      <p> 🛡️${pokemon.stats["base-defense"]} </p>
-      <p> ❤️${pokemon.stats["base-stamina"]} </p>
-    </div>
-    <p> 📊 ${pokemon.stats["medCal"]} </p>
-  </section>`
-    
+
+    const card = `<section  id = "card" class ="card-container">
+      <div class="card-front">
+        <div class = "titulos">
+          <p id = "namePok"> ${pokemon.name}</p>
+          <p id = "num"> ${pokemon.num}</p>
+        </div>
+        <img id = "img" src = "${pokemon.img}">
+        <div class = "tipos">
+          <p> ${pokemon.type} </p>
+        </div>
+      </div>
+    </section>`
     document.getElementById("listaPokemon").innerHTML += card
+
+    const cardback = `
+    <div class="card-back">
+      <div class = "indices">
+        <p> ⚔️${pokemon.stats["base-attack"]} </p>
+        <p> 🛡️${pokemon.stats["base-defense"]} </p>
+        <p> ❤️${pokemon.stats["base-stamina"]} </p>
+        <p> 📊 ${pokemon.stats["medCal"]} </p>
+      </div>
+    </div> `
+    document.getElementById("listaPokemon").innerHTML += cardback
   }
 }
 
@@ -71,22 +77,22 @@ const buscaData = function (data, search) {
 }
 
 let button = document.getElementById("btnSearch")
-button.addEventListener("click", function(){
+button.addEventListener("click", function () {
   let valorInput = document.getElementById("search").value
   let resulSearch = buscaData(data.pokemon, valorInput)
-  
+
   show(resulSearch)
-  
+
 })
 
-document.getElementById("btnHome").addEventListener("click", function(){
+document.getElementById("btnHome").addEventListener("click", function () {
   finalArray = 20
-  show(POKEMONS.slice(0,finalArray))
+  show(POKEMONS.slice(0, finalArray))
 })
-document.getElementById("btnShowMore").addEventListener("click", function(){
+document.getElementById("btnShowMore").addEventListener("click", function () {
   finalArray += 20
-  show(POKEMONS.slice(0,finalArray))
+  show(POKEMONS.slice(0, finalArray))
 });
-document.getElementById("btnShowAll").addEventListener("click", function(){
+document.getElementById("btnShowAll").addEventListener("click", function () {
   show(POKEMONS)
 });
