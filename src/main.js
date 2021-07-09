@@ -14,30 +14,32 @@ function show(itens) {
   document.getElementById("listaPokemon").innerHTML = "";
   for (let pokemon of itens) {
 
-    const card = `<section  id = "card" class ="card-container">
-      <div class="card-front">
-        <div class = "titulos">
-          <p id = "namePok"> ${pokemon.name}</p>
-          <p id = "num"> ${pokemon.num}</p>
+    const card = `
+    <section  id = "card" class ="card-container">
+      <div class="thecard">
+        <div class="card-front">
+          <div class = "title">
+            <p id = "namePok"> ${pokemon.name}</p>
+            <p id = "num"> ${pokemon.num}</p>
+          </div>
+          <img id = "img" src = "${pokemon.img}">
+          <div class = "tipos">
+            <p> ${pokemon.type} </p>
+          </div>
         </div>
-        <img id = "img" src = "${pokemon.img}">
-        <div class = "tipos">
-          <p> ${pokemon.type} </p>
+
+        <div class="card-back">
+          <div class = "infos">
+            <p> ⚔️${pokemon.stats["base-attack"]} </p>
+            <p> 🛡️${pokemon.stats["base-defense"]} </p>
+            <p><i class="fas fa-heartbeat"></i>${pokemon.stats["base-stamina"]} </p>
+            <p> 📊 ${pokemon.stats["medCal"]} </p>
+          </div>
         </div>
       </div>
     </section>`
     document.getElementById("listaPokemon").innerHTML += card
-
-    const cardback = `
-    <div class="card-back">
-      <div class = "indices">
-        <p> ⚔️${pokemon.stats["base-attack"]} </p>
-        <p> 🛡️${pokemon.stats["base-defense"]} </p>
-        <p> ❤️${pokemon.stats["base-stamina"]} </p>
-        <p> 📊 ${pokemon.stats["medCal"]} </p>
-      </div>
-    </div> `
-    document.getElementById("listaPokemon").innerHTML += cardback
+    
   }
 }
 
