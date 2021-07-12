@@ -4,6 +4,7 @@ import data from './data/pokemon/pokemon.js';
 
 let finalArray = 20;
 const POKEMONS = data.pokemon;
+let filteredPokemons = POKEMONS;
 average(POKEMONS);
 show(POKEMONS.slice(0, finalArray))
 
@@ -24,16 +25,16 @@ function show(itens) {
           </div>
           <img id = "img" src = "${pokemon.img}">
           <div class = "tipos">
-            <p> ${pokemon.type} </p>
+            <p class= "types-pokemon"> ${pokemon.type} </p>
           </div>
         </div>
 
         <div class="card-back">
           <div class = "infos">
-            <p> ⚔️${pokemon.stats["base-attack"]} </p>
-            <p> 🛡️${pokemon.stats["base-defense"]} </p>
-            <p><i class="fas fa-heartbeat"></i>${pokemon.stats["base-stamina"]} </p>
-            <p> 📊 ${pokemon.stats["medCal"]} </p>
+            <p class= "test" >${pokemon.generation["num"]} </p>
+            <p class= "numbers">Altura ${pokemon.size["height"]} </p>
+            <p class= "numbers">Peso ${pokemon.size["weight"]} </p>
+            <p class= "numbers"><i class="far fa-signal-alt"></i> Media stats ${pokemon.stats["medCal"]} </p>
           </div>
         </div>
       </div>
@@ -43,19 +44,15 @@ function show(itens) {
   }
 }
 
-
-
 const type = document.getElementById('type');
 
 type.addEventListener("change", function () {
-  let filteredPokemons;
+  filteredPokemons = POKEMONS;
+  
   if (type.value !== "") {
-    filteredPokemons = filterData(POKEMONS, type.value)
+    filteredPokemons = filterData(filteredPokemons, type.value)
   }
-  else {
-    filteredPokemons = POKEMONS;
-  }
-  show(filteredPokemons)
+  show(filteredPokemons);
 });
 
 
@@ -65,7 +62,7 @@ order.addEventListener("change", function (e) {
   e.preventDefault();
 
   const orderValues = order.value.split("/");
-  const sortnames = sortData(POKEMONS, orderValues[0], orderValues[1]);
+  const sortnames = sortData(filteredPokemons, orderValues[0], orderValues[1]);
   show(sortnames);
 });
 
