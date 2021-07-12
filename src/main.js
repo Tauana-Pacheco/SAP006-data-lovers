@@ -9,8 +9,6 @@ average(POKEMONS);
 show(POKEMONS.slice(0, finalArray))
 
 
-
-
 function show(itens) {
   document.getElementById("listaPokemon").innerHTML = "";
   for (let pokemon of itens) {
@@ -48,7 +46,7 @@ const type = document.getElementById('type');
 
 type.addEventListener("change", function () {
   filteredPokemons = POKEMONS;
-  
+
   if (type.value !== "") {
     filteredPokemons = filterData(filteredPokemons, type.value)
   }

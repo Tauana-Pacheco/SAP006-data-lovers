@@ -12,73 +12,75 @@
 
 <body>
   <header class="título">
-    <img src = "image/logopoke.png" alt="Logo Pokemon">
+    <img src="image/logopoke.png" alt="Logo Pokemon">
   </header>
 
-  <nav>
-    <label for="">Pesquisar Pokemon</label>
-    <input type="text" id="search">
-    <button id="btnSearch"><i class="fas fa-search-location"></i></button>
+    <nav>
+      <label for="" class="type-font">PESQUISAR POKEMON</label>
+      <input type="text" id="search">
+      <button id="btnSearch"><i class="fas fa-search-location"></i></button>
 
-    <label for="">Filtro</label>
-    <select name="" id="type">
-      <option value="" selected>--</option>
-      <option value="fire">Fire</option>
-      <option value="water">Water</option>
-      <option value="grass">Grass</option>
-      <option value="normal">Normal</option>
-      <option value="flying">Flying</option>
-      <option value="fighting">Fighting</option>
-      <option value="poison">Poison</option>
-      <option value="ground">Ground</option>
-      <option value="rock">Rock</option>
-      <option value="bug">Bug</option>
-      <option value="ghost">Ghost</option>
-      <option value="steel">Steel</option>
-      <option value="electric">Electric</option>
-      <option value="psychic">Psychic</option>
-      <option value="ice">Ice</option>
-      <option value="dragon">Dragon</option>
-      <option value="fairy">Fairy</option>
-      <option value="dark">Dark</option>
-    </select>
-    
-    <label for="">Ordenar</label>
-    <select name="" id="order">
-      <option value="" selected="selected">--</option>
-      <option value="name/asc">A-Z</option>
-      <option value="name/desc">Z-A</option>
-    </select>
+      <label for=""  class="type-font">FILTRAR</label>
+      <select name="" id="type">
+        <option value="" selected>--</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="grass">Grass</option>
+        <option value="normal">Normal</option>
+        <option value="flying">Flying</option>
+        <option value="fighting">Fighting</option>
+        <option value="poison">Poison</option>
+        <option value="ground">Ground</option>
+        <option value="rock">Rock</option>
+        <option value="bug">Bug</option>
+        <option value="ghost">Ghost</option>
+        <option value="steel">Steel</option>
+        <option value="electric">Electric</option>
+        <option value="psychic">Psychic</option>
+        <option value="ice">Ice</option>
+        <option value="dragon">Dragon</option>
+        <option value="fairy">Fairy</option>
+        <option value="dark">Dark</option>
+      </select>
 
-    <label for="">Home</label>
-    <button id="btnHome"><i class="fas fa-home"></i></button>
-        
-  </nav>
-  <section id = "listaPokemon">
-    <section  id = "card" class ="card">
-      <div class = "titulos">
-        <p id = "namePok"></p>
-        <p id = "num"></p>
-      </div>
-      <img id = "img">
-      <div class = "tipos">
+      <label for=""  class="type-font">ORDENAR</label>
+      <select name="" id="order">
+        <option value="" selected="selected">--</option>
+        <option value="name/asc">A-Z</option>
+        <option value="name/desc">Z-A</option>
+      </select>
+
+      <!-- <label for="">CASA</label> -->
+      <button id="btnHome"><i class="fas fa-home"></i></button>
+
+    </nav>
+
+    <section id="listaPokemon">
+      <section id="card" class="card">
+        <div class="titulos">
+          <p id="namePok"></p>
+          <p id="num"></p>
+        </div>
+        <img id="img">
+        <div class="tipos">
+          <p></p>
+        </div>
+        <div class="indices">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
         <p></p>
-      </div>
-      <div class = "indices">
-        <p></p>
-        <p></p>
-        <p></p>
-      </div>
-      <p></p>
+      </section>
     </section>
-  </section>
 
-  <label for=""></label>
-  <button id="btnShowMore">Mostrar Mais</button>
-  <label for=""></label>
-  <button id="btnShowAll">Mostrar Tudo</button>
+    <label for=""></label>
+    <button id="btnShowMore">Mostrar Mais</button>
+    <label for=""></label>
+    <button id="btnShowAll">Mostrar Tudo</button>
 
-  <script src = "main.js" type = "module"></script>
+    <script src="main.js" type="module"></script>
+  
 </body>
 
 </html>
