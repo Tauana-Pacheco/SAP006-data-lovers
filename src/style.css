@@ -4,6 +4,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #3859a1;
 }
 
 .titulo {
@@ -22,12 +23,14 @@ nav {
 }
 
 label {
-  color: rgba(194, 116, 15, 0.952);
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  color:#fff;
   font-size: 20px;
 }
 
 select {
-  border: 1px solid rgba(194, 116, 15, 0.952);
+  border: 2px solid #030f29;
   border-radius: 10px;
   height: 40px;
   width: 150px;
@@ -41,22 +44,11 @@ select {
   justify-content: space-evenly;
 }
 
-/* .card-container {
-  position: absolute;
-  box-sizing: border-box;
-  width: 300px;
-  height: 400;
-  background-color: rgb(241, 241, 66);
-  border-radius: 10px;
-  border: 10px solid rgba(184, 135, 11, 0.455);
-  margin: 30px 10px;
-} */
-
 .card-container {
   position: relative;
   width: 250px;
   height: 320px;
-  background-color: #fff;
+  background-color: #3859a1;
   margin: 30px 10px;
 }
 
@@ -66,7 +58,13 @@ select {
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease; 
-  background-color: rgba(241, 227, 28, 0.87);
+  background-image: linear-gradient(#FFFF66, #FFFF33, #FFFF00);
+  /* background-image: linear-gradient(
+    #fcfc33,
+    #ffff20,
+    #fcfc75,
+    #ffff6a,
+    #ffff05); */
   border-radius: 10px;
 }
 
@@ -84,12 +82,14 @@ select {
 }
 
 .card-back {
+  padding-top: 60px;
   position: absolute; 
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   color: #333; 
-  background-color: rgba(231, 223, 101, 0.87);
+  font-weight: bold;
+  background-image: linear-gradient(#FFFF00,#FFFF66, #FFFF33);
   transform: rotateY(180deg);
   border-radius: 10px;
 }
@@ -111,10 +111,6 @@ select {
   font-size: 20px;
 }
 
-/* .teste {
-  
-} */
-
 .card img {
   display: block;
   width: 50%;
@@ -133,8 +129,9 @@ select {
 }
 
 .fas {
+  border: 2px #030f29;
   font-size: 20px;
-  color: rgba(194, 116, 15, 0.952);
+  color: #030f29;
 }
 
 .far {
@@ -152,96 +149,60 @@ select {
 
 .types-pokemon {
   justify-content: space-between;
+  font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #search {
-  border: 1px solid rgba(194, 116, 15, 0.952);
+  border: 2px solid #030f29;
   border-radius: 10px;
   height: 40px;
   width: 150px;
   font-size: 18px;
   padding: 1px;
 }
+
 #btnSearch {
   height: 40px;
   border-radius: 10px;
-  border: 1px solid rgba(194, 116, 15, 0.952);
+  border: 2px solid #030f29;
   padding: 0px;
   width: 40px;
   margin-right: 30px;
-  background-color: rgba(184, 135, 11, 0.455);
+  background-color: #fff;
 }
+
 #btnHome {
   height: 40px;
   border-radius: 10px;
-  border: 1px solid rgba(194, 116, 15, 0.952);
+  border: 2px solid #030f29;
   padding: 0px;
   width: 40px;
   margin-right: 30px;
-  background-color: rgba(184, 135, 11, 0.455);
+  background-color: #fff;
 }
+
 #btnShowMore {
   text-align: center;
   font-size: larger;
   height: 100px;
   border-radius: 10px;
-  border: 1px solid rgba(194, 116, 15, 0.952);
+  border: 2px solid #030f29;
   padding: 0px;
   width: 200px;
-  background-color: rgba(184, 135, 11, 0.455);
+  background-color: #fff;
   font-weight: bold;
   text-transform: capitalize;
 }
+
 #btnShowAll {
   text-align: center;
   font-size: larger;
   height: 100px;
   border-radius: 10px;
-  border: 1px solid rgba(194, 116, 15, 0.952);
+  border: 2px solid #030f29;
   padding: 0px;
   width: 200px;
-  background-color: rgba(184, 135, 11, 0.455);
+  background-color: #fff;
   font-weight: bold;
   text-transform: capitalize;
 }
