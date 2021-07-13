@@ -59,13 +59,7 @@ select {
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease; 
-  background-image: linear-gradient(#FFFF66, #FFFF33, #FFFF00);
-  /* background-image: linear-gradient(
-    #fcfc33,
-    #ffff20,
-    #fcfc75,
-    #ffff6a,
-    #ffff05); */
+  background-image: linear-gradient(#f8f82f,#5060bb, #f05757);
   border-radius: 10px;
 }
 
@@ -90,7 +84,7 @@ select {
   backface-visibility: hidden;
   color: #333; 
   font-weight: bold;
-  background-image: linear-gradient(#FFFF00,#FFFF66, #FFFF33);
+  background-image: linear-gradient(#f8f82f,#5060bb, #f05757);
   transform: rotateY(180deg);
   border-radius: 10px;
 }
@@ -160,17 +154,6 @@ select {
   width: 200px;
   font-size: 18px;
   padding: 1px;
-}
-
-#btnSearch {
-  height: 40px;
-  border-radius: 10px;
-  border: 2px solid #030f29;
-  padding: 0px;
-  width: 40px;
-  margin-right: 30px;
-  background-color: #fff;
-  height: 35px;
 }
 
 #btnHome {
