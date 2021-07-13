@@ -73,13 +73,10 @@ const buscaData = function (data, search) {
   return pokSearch;
 }
 
-let button = document.getElementById("btnSearch")
-button.addEventListener("click", function () {
-  let valorInput = document.getElementById("search").value
-  let resulSearch = buscaData(data.pokemon, valorInput)
-
+let valorInput = document.getElementById("search")
+valorInput.addEventListener("keyup", function () {
+  let resulSearch = buscaData(data.pokemon, valorInput.value)
   show(resulSearch)
-
 })
 
 document.getElementById("btnHome").addEventListener("click", function () {
