@@ -36,6 +36,7 @@ select {
   width: 150px;
   font-size: 18px;
   margin-right: 10px;
+  height: 35px;
 }
 
 #listaPokemon {
@@ -155,8 +156,8 @@ select {
 #search {
   border: 2px solid #030f29;
   border-radius: 10px;
-  height: 40px;
-  width: 150px;
+  height: 35px;
+  width: 200px;
   font-size: 18px;
   padding: 1px;
 }
@@ -169,6 +170,7 @@ select {
   width: 40px;
   margin-right: 30px;
   background-color: #fff;
+  height: 35px;
 }
 
 #btnHome {
@@ -179,6 +181,14 @@ select {
   width: 40px;
   margin-right: 30px;
   background-color: #fff;
+  height: 35px;
+}
+
+.buttons {
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3% auto;
 }
 
 #btnShowMore {
@@ -192,6 +202,7 @@ select {
   background-color: #fff;
   font-weight: bold;
   text-transform: capitalize;
+  height: 45px;
 }
 
 #btnShowAll {
@@ -205,4 +216,6 @@ select {
   background-color: #fff;
   font-weight: bold;
   text-transform: capitalize;
+  height: 45px;
+  margin-left: 50px;
 }
