@@ -14,9 +14,9 @@ function show(itens) {
   for (let pokemon of itens) {
 
     const card = `
-    <section  id = "card" class ="card-container">
+    <section  id = "card" class ="card-container" tabindex="0">
       <div class="thecard">
-        <div class="card-front">
+        <div class="card-front" tabindex="0">
           <div class = "title">
             <p id = "namePok"> ${pokemon.name}</p>
             <p id = "num"> ${pokemon.num}</p>
