@@ -14,49 +14,54 @@
   <header class="título">
     <h1 class="nossoLogo">PoKéHaLL</h1>
     <img class="imgBola" src="image/pokebola.png" alt="Pokebola">
-  </header>
+  </header>  
 
-  <nav>
-    <label for="" class="type-font">PESQUISAR POKEMON</label>
-    <input type="text" id="search">
-    <button id="btnSearch"><i class="fas fa-search-location"></i></button>
+  <nav class="flexPokemon">
+    <div class="searchPokemon">
+      <label for="" class="type-font">PESQUISAR POKÉMON</label>
+      <input type="text" id="search" placeholder="Encontre seu Pokémon" />
+    </div>
 
-    <label for="" class="type-font">FILTRAR</label>
-    <select name="" id="type">
-      <option value="" selected>--</option>
-      <option value="fire">Fire</option>
-      <option value="water">Water</option>
-      <option value="grass">Grass</option>
-      <option value="normal">Normal</option>
-      <option value="flying">Flying</option>
-      <option value="fighting">Fighting</option>
-      <option value="poison">Poison</option>
-      <option value="ground">Ground</option>
-      <option value="rock">Rock</option>
-      <option value="bug">Bug</option>
-      <option value="ghost">Ghost</option>
-      <option value="steel">Steel</option>
-      <option value="electric">Electric</option>
-      <option value="psychic">Psychic</option>
-      <option value="ice">Ice</option>
-      <option value="dragon">Dragon</option>
-      <option value="fairy">Fairy</option>
-      <option value="dark">Dark</option>
-    </select>
+    <div class="filterPokemon">
+      <label for="" class="type-font">FILTRAR</label>
+      <select name="" id="type">
+        <option value="" selected>--</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="grass">Grass</option>
+        <option value="normal">Normal</option>
+        <option value="flying">Flying</option>
+        <option value="fighting">Fighting</option>
+        <option value="poison">Poison</option>
+        <option value="ground">Ground</option>
+        <option value="rock">Rock</option>
+        <option value="bug">Bug</option>
+        <option value="ghost">Ghost</option>
+        <option value="steel">Steel</option>
+        <option value="electric">Electric</option>
+        <option value="psychic">Psychic</option>
+        <option value="ice">Ice</option>
+        <option value="dragon">Dragon</option>
+        <option value="fairy">Fairy</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
 
-    <label for="" class="type-font">ORDENAR</label>
-    <select name="" id="order">
-      <option value="" selected="selected">--</option>
-      <option value="name/asc">A-Z</option>
-      <option value="name/desc">Z-A</option>
-    </select>
+    <div class="orderPokemon">
+      <label for="" class="type-font">ORDENAR</label>
+      <select name="" id="order">
+        <option value="" selected="selected">--</option>
+        <option value="name/asc">A-Z</option>
+        <option value="name/desc">Z-A</option>
+      </select>
+    </div>
 
-    <!-- <label for="">CASA</label> -->
-    <button id="btnHome"><i class="fas fa-home"></i></button>
-
+    <div class="homePokemon"> 
+      <button id="btnHome"><i class="fas fa-home"></i></button>
+    </div>
   </nav>
 
-  <section id="listaPokemon">
+  <section id="listaPokemon" aria-label="Card Pokémon" tabindex="0">
     <section id="card" class="card">
       <div class="titulos">
         <p id="namePok"></p>

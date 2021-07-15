@@ -14,9 +14,9 @@ function show(itens) {
   for (let pokemon of itens) {
 
     const card = `
-    <section  id = "card" class ="card-container">
+    <section  id = "card" class ="card-container" tabindex="0">
       <div class="thecard">
-        <div class="card-front">
+        <div class="card-front" tabindex="0">
           <div class = "title">
             <p id = "namePok"> ${pokemon.name}</p>
             <p id = "num">#${pokemon.num}</p>
@@ -73,13 +73,10 @@ const buscaData = function (data, search) {
   return pokSearch;
 }
 
-let button = document.getElementById("btnSearch")
-button.addEventListener("click", function () {
-  let valorInput = document.getElementById("search").value
-  let resulSearch = buscaData(data.pokemon, valorInput)
-
+let valorInput = document.getElementById("search")
+valorInput.addEventListener("keyup", function () {
+  let resulSearch = buscaData(data.pokemon, valorInput.value)
   show(resulSearch)
-
 })
 
 document.getElementById("btnHome").addEventListener("click", function () {
