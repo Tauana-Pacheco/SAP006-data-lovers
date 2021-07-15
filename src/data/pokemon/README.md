@@ -1,17 +1,21 @@
-Pokémon
+#PokéHall
 
-​Pokémon GO é uma experiência de jogo internacional que tem mais de um bilhão de downloads e foi nomeado "o melhor jogo para celular" pelo Game Developers Choice Awards e "a melhor aplicação do ano" pelo TechCrunch (extraído do Google Play). Os usuários do jogo se tornam "Mestres/ treinadores Pokémons" e podem:
+PokéHall é uma página vitrine para os jogadores de Pokémon Go. Essa interface foi pensada para ser simples e clara, de forma que usuários iniciantes e avançados possam pesquisar os personagens por tipo, ordená-los pelo nome e conhecer a média de força. Nos baseamos nas seguintes Histórias de Usuário:
 
-Descobrir o mundo Pokémon: explorar e descobrir novos Pokémon onde quer que estejam.
-Pegar diferentes Pokémon para completar seu Pokédex.
-Lutar contra Pokémon de outros treinadores e conquiste ginásios.
-Competir em batalhas épicas contra outros treinadores.
-Juntar-se a outros treinadores para capturar Pokémon poderosos durante os ataques.
-Constatações
-​Para entender melhor as necessidades complementares dos usuários do aplicativo, fizemos uma investigação rápida (pesquisa) e estas são algumas das descobertas.
+- **Como jogador iniciante de Pokémon Go, quero poder ordenar os pokémons por ordem alfabética, para que possa facilmente encontrar diferentes Pokémons.** Atendemos essa história ao criar a função de ordenar por ordem alfabética. Entendemos que essa função está pronta, quando o usuário clicar na opção desejada (A-Z ou Z-A) e automaticamente ordenar os personagens que estiverem na tela, sejam os da tela incial (todos os personagens) ou os personagens filtrados. 
+    
+- **Como mestre Pokémon, quero filtrar os Pokémons pelos seus tipos, para conseguir criar estratégias de jogo.** Atendemos essa história ao criar a função de filtrar por todos os tipos disponíveis na geração 1 e 2. Definimos que essa função está pronta, ao dar opções possíveis (são 16) e quando o usuário selecionar alguma, a página mostrará apenas os personagens daquele tipo. 
 
-Os Pokémons têm características únicas que determinam as decisões tomadas pelo usuário (tipo, fraqueza, peso, multiplicador, etc.).
-Um mestre Pokémon antes de sair para caçar os Pokémons tem que conhecer os 10 principais Pokémons que aparecem com mais frequência.
-Os Pokémons têm diferentes tipos e fraquezas em combate. Estas características são importantes na escolha do Pokémon mais adequado para sua batalha. Às vezes, você tem que escolher aqueles com menos fraquezas e saber de que tipo eles são. Portanto, é importante que um mestre de Pokémon seja capaz de ordená-los por essas 2 características.
-Os Pokémons evoluem e é importante para um mestre Pokémon saber quantas e quais evoluções eles têm antes e depois.
-Pokémon comem candies e um mestre Pokémon precisa saber quantos candies um Pokémon precisa para evoluir.
+
+- **Como mestre Pokémon, preciso buscar determinado Pokémon pelo seu nome para que eu possa acessar suas principais informações.** Atendemos essa demanda criando um campo de busca por nomes. Essa função está pronta quando mostrar na tela o personagem desejado pelo usuário, ao escrever o nome e clicar no botão Buscar. Também implementamos a função auto-complete, para ajudar o usuário iniciante que pode não saber a escrita correta do nome.
+
+- **Como mestre Pokémon, quero conhecer a média de suas estatísticas para escolher um personagem nas minhas lutas.** Atendemos essa necessidade calculando a média das estatísticas de Ataque, Defesa e Stamina e mostrando no card junto com as informações padrão. Estará pronta, ao calcular e mostrar automáticamente no card, junto com as informações padrão. 
+
+O projeto tem como critérios mínimos a sua total funcionalidade, ter passados nos testes unitários e ter sido publicado no GitHub Pages. 
+
+Nosso protótipo inicial foi pensado assim:
+
+<img src="image/protótipo.png" alt="Protótipo de baixa fidelidade">
+
+Nossos testes de usabilidade nos fez alterar a forma como dispomos as informações no card, o número de personagens exibidos na tela inicial,uma breve descrição do que é o site na tela inicial e a criação dos botões Mostrar Mais e Mostrar tudo.
+
