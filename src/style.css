@@ -2,9 +2,42 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'pokemonHollow';
+  /* src: url('./Fontes/pokemon-hollow-webfont.woff'); */
+  src: url('./Fontes/Pokemon\ Solid.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #3859a1;
+  background-color: #1d376e;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.nossoLogo {
+  font-family: 'pokemonHollow';
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  display: block;
+  color: #FFCB05;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #2A75BB;
+  text-shadow: 0 1px 0 #1f507e, 0 2px 0 #1f507e, 0 3px 0 #1f507e, 0 4px 0 #1f507e, 0 5px 0 #1f507e, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  letter-spacing: 9px;
+  margin-bottom: 0px;
+}
+
+.imgBola {
+  width: 15%;
+  margin: 0 auto 50px;
+  transition: 0.8s;
+}
+
+.imgBola:hover {
+  transform: rotate(350deg);
 }
 
 .titulo {
@@ -14,7 +47,7 @@ body {
 
 img {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto
 }
 
 nav {
@@ -25,7 +58,7 @@ nav {
 label {
   font-family: 'Staatliches', cursive;
   font-weight: bold;
-  color:#fff;
+  color: #fff;
   font-size: 20px;
 }
 
@@ -45,10 +78,11 @@ select {
 }
 
 .card-container {
+  font-family: 'inter', sans-serif;
   position: relative;
   width: 250px;
   height: 320px;
-  background-color: #3859a1;
+  background-color: #1d376e;
   margin: 30px 10px;
 }
 
@@ -57,7 +91,7 @@ select {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
   background-image: linear-gradient(#FFFF66, #FFFF33, #FFFF00);
   /* background-image: linear-gradient(
     #fcfc33,
@@ -73,25 +107,27 @@ select {
 }
 
 .card-front {
-  position: absolute; 
+  position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   background-color: light;
-  color: #333; 
+  color: #333;
+  box-shadow: 8px 15px 13px -7px #000000;
 }
 
 .card-back {
   padding-top: 60px;
-  position: absolute; 
+  position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  color: #333; 
+  color: #333;
   font-weight: bold;
-  background-image: linear-gradient(#FFFF00,#FFFF66, #FFFF33);
+  background-image: linear-gradient(#FFFF00, #FFFF66, #FFFF33);
   transform: rotateY(180deg);
   border-radius: 10px;
+  box-shadow: 8px 15px 13px -7px #000000;
 }
 
 .title, .tipos {
@@ -102,8 +138,12 @@ select {
 
 .title {
   font-size: larger;
-  font-weight: bold;
+  font-weight: bolder;
   text-transform: capitalize;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: 2px;
 }
 
 .infos {
@@ -121,7 +161,6 @@ select {
   text-align: center;
 }
 
-
 .tipos {
   display: flex;
   justify-content: center;
@@ -135,7 +174,7 @@ select {
 }
 
 .far {
-  font-size: 50px; 
+  font-size: 50px;
   color: #fff;
 }
 
@@ -180,21 +219,13 @@ select {
   margin-right: 30px;
   background-color: #fff;
 }
-
-#btnShowMore {
-  text-align: center;
-  font-size: larger;
-  height: 100px;
-  border-radius: 10px;
-  border: 2px solid #030f29;
-  padding: 0px;
-  width: 200px;
-  background-color: #fff;
-  font-weight: bold;
-  text-transform: capitalize;
+.btnsMS {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-#btnShowAll {
+#btnShowMore, #btnShowAll {
   text-align: center;
   font-size: larger;
   height: 100px;
@@ -205,4 +236,22 @@ select {
   background-color: #fff;
   font-weight: bold;
   text-transform: capitalize;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: 0.4s;
+  box-shadow: 8px 15px 13px -7px #000000;
+}
+
+#btnShowMore:hover, #btnShowAll:hover {
+  background-color: rgb(184, 183, 183);
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #706e6e;
+  font-size: 22px;
 }

@@ -19,7 +19,7 @@ function show(itens) {
         <div class="card-front">
           <div class = "title">
             <p id = "namePok"> ${pokemon.name}</p>
-            <p id = "num"> ${pokemon.num}</p>
+            <p id = "num">#${pokemon.num}</p>
           </div>
           <img id = "img" src = "${pokemon.img}">
           <div class = "tipos">
