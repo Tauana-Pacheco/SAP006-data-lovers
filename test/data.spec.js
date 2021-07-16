@@ -64,3 +64,4 @@ describe('average', () => {
     expect(averagePokemon).toEqual(expectedResult)
   });
 });
+
