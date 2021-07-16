@@ -2,18 +2,18 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'pokemonHollow';
-  /* src: url('./Fontes/pokemon-hollow-webfont.woff'); */
-  src: url('./Fontes/Pokemon\ Solid.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
   background-color: #1d376e;
   flex-wrap: wrap;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@font-face {
+  font-family: 'pokemonHollow';
+  src: url('./Fontes/Pokemon\ Solid.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .nossoLogo {
@@ -28,6 +28,7 @@ body {
   text-shadow: 0 1px 0 #1f507e, 0 2px 0 #1f507e, 0 3px 0 #1f507e, 0 4px 0 #1f507e, 0 5px 0 #1f507e, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   letter-spacing: 9px;
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .imgBola {
@@ -106,6 +107,7 @@ select {
   transition: all 0.5s ease; 
   background-image: linear-gradient(#f8f82f,#5060bb, #f05757);
   border-radius: 10px;
+  box-shadow: 8px 15px 13px -7px #000000;
 }
 
 .thecard:hover {
@@ -119,7 +121,6 @@ select {
   backface-visibility: hidden;
   background-color: light;
   color: #000;
-  box-shadow: 8px 15px 13px -7px #000000;
 }
 
 .card-back {
@@ -148,7 +149,6 @@ select {
   text-transform: capitalize;
   padding-left: 10px;
   padding-right: 10px;
-  text-shadow: 1px 1px 1px black;
   letter-spacing: 2px;
 }
 
@@ -222,8 +222,9 @@ select {
   margin-right: 30px;
   background-color: #fff;
   width: 40px;
-    height: 40px;
+  height: 40px;
 }
+
 .btnsMS {
   display: flex;
   justify-content: center;
@@ -233,7 +234,7 @@ select {
 #btnShowMore, #btnShowAll {
   text-align: center;
   font-size: larger;
-  height: 100px;
+  height: 70px;
   border-radius: 10px;
   border: 2px solid #030f29;
   padding: 0px;
@@ -245,48 +246,38 @@ select {
   margin-left: 10px;
   transition: 0.4s;
   box-shadow: 8px 15px 13px -7px #000000;
+  font-family: 'Staatliches', cursive;
 }
 
 #btnShowMore:hover, #btnShowAll:hover {
   background-color: rgb(184, 183, 183);
 }
 
-
 footer {
-  height: 80px;
-  width: 100%;
-  padding: 20px;
   margin-top: 20px;
   text-align: center;
   color: #706e6e;
-  font-size: 22px;
-  font-size: larger;
-  height: 100px;
-  border-radius: 10px;
-  border: 2px solid #030f29;
-  padding: 0px;
-  width: 200px;
-  background-color: #fff;
-  font-weight: bold;
-  text-transform: capitalize;
   height: 45px;
   margin-left: 50px;
   font-family: 'Staatliches', cursive;
   font-size: 18px;
+  padding-right:70px
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .flexPokemon {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1 1 0px;
-  background-color: #f05757;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   #search , #type , #order {
     width: 100%;
+  }
+
+  .card-container {
+    width: 40%;
   }
 
   #btnHome {
@@ -295,14 +286,28 @@ footer {
     margin-right: 0;
   }
 
+  .title {
+    font-size: 22px;
+    text-shadow: 0 0 black;
+    text-transform: capitalize;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .types-pokemon {
+    font-size: 22px;
+  }
+
   .thecard {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 80%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;
     background-image: linear-gradient(#f8f82f,#5060bb, #f05757);
     border-radius: 10px;
+    margin-left: 10%;
   }
 
   .thecard:hover {
@@ -329,5 +334,11 @@ footer {
     background-image: linear-gradient(#f8f82f,#5060bb, #f05757);
     transform: rotateY(180deg);
     border-radius: 10px;
+  }
+}
+
+@media (min-width: 360px) and (max-width:640px) {
+  .card-container {
+    width: 60%;
   }
 }
