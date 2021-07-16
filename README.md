@@ -24,5 +24,5 @@ Nosso protótipo inicial foi pensado assim:
 
 <img src="image/prototipo.png" alt="Protótipo de baixa fidelidade">
 
-Nossos testes de usabilidade nos fez alterar a forma como dispomos as informações no card, o número de personagens exibidos na tela inicial,uma breve descrição do que é o site na tela inicial e a criação dos botões Mostrar Mais e Mostrar tudo.
+Nossos testes de usabilidade nos fez alterar a forma como dispomos as informações no card, o número de personagens exibidos na tela inicial, e a criação dos botões Mostrar Mais e Mostrar tudo.
 
