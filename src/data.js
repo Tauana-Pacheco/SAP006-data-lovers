@@ -9,7 +9,7 @@ export const filterData = function (data, typeselect) {
 
 export const sortData = (data, sortBy, sortOrder) => {
   const allpokemons = data.slice();
-
+  
   if (sortOrder === 'asc') {
     allpokemons.sort(
       function (a, b) {
@@ -24,8 +24,8 @@ export const sortData = (data, sortBy, sortOrder) => {
       function (a, b) {
         if (a[sortBy] > b[sortBy])
           return -1;
-        //  if (a[sortBy] < b[sortBy])
-        //    return 1;
+        if (a[sortBy] < b[sortBy])
+           return 1;
       }
     )
   }
