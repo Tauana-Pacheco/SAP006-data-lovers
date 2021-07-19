@@ -294,6 +294,11 @@ a:hover {
     margin-right: 0;
   }
 
+  #btnShowMore, #btnShowAll, label {
+    font-family: 'Staatliches', monospace;
+  }
+
+
   .title {
     font-size: 22px;
     text-shadow: 0 0 black;
@@ -352,6 +357,10 @@ a:hover {
     width: 60px;
     height: 60px;
     margin-right: 0;
+  }
+
+  #btnShowMore, #btnShowAll, label {
+    font-family: 'Staatliches', monospace;
   }
 
   .title {
@@ -429,6 +438,10 @@ a:hover {
     height: 100px;
     padding: 20px 0;
     margin: 10px 0;
+  }
+
+  #btnShowMore, #btnShowAll, label {
+    font-family: 'Staatliches', monospace;
   }
   
 }
