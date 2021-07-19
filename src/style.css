@@ -19,7 +19,7 @@ body {
 .nossoLogo {
   font-family: 'pokemonHollow';
   text-align: center;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: bolder;
   display: block;
   color: #FFCB05;
@@ -28,11 +28,11 @@ body {
   text-shadow: 0 1px 0 #1f507e, 0 2px 0 #1f507e, 0 3px 0 #1f507e, 0 4px 0 #1f507e, 0 5px 0 #1f507e, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   letter-spacing: 9px;
   margin-bottom: 0px;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .imgBola {
-  width: 15%;
+  width: 5%;
   margin: 0 auto 50px;
   transition: 0.8s;
 }
@@ -201,7 +201,7 @@ select {
   border: 2px solid #030f29;
   border-radius: 10px;
   height: 40px;
-  width: 150px;
+  width: 200px;
   font-size: 18px;
   padding: 1px;
 }
@@ -262,6 +262,15 @@ footer {
   font-family: 'Staatliches', cursive;
   font-size: 18px;
   padding-right:70px;
+}
+
+a {
+  color: #706e6e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f8f82f;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
