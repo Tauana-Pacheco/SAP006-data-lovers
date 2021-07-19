@@ -12,11 +12,11 @@ PokéHall é uma página vitrine para os jogadores de Pokémon Go. Essa interfac
 
 - **Como mestre Pokémon, preciso buscar determinado Pokémon pelo seu nome para que eu possa acessar suas principais informações.** Atendemos essa demanda criando um campo de busca por nomes. Essa função está pronta quando mostrar na tela o personagem desejado pelo usuário, ao escrever o nome e clicar no botão Buscar. Também implementamos a função auto-complete, para ajudar o usuário iniciante que pode não saber a escrita correta do nome.
 
-<img src="buscaNome.gif" alt="Giff Campo de busca">
+<img src="busca.gif" alt="Giff Campo de busca">
 
 - **Como mestre Pokémon, quero conhecer a média de suas estatísticas para escolher um personagem nas minhas lutas.** Atendemos essa necessidade calculando a média das estatísticas de Ataque, Defesa e Stamina e mostrando no card junto com as informações padrão. Estará pronta, ao calcular e mostrar automáticamente no card, junto com as informações padrão. 
 
-<img src="mediaStats.png" alt="Imagem da média estatística calculada">
+<img src="verso.png" alt="Imagem da média estatística calculada">
 
 O projeto tem como critérios mínimos a sua total funcionalidade, ter passados nos testes unitários e ter sido publicado no GitHub Pages. 
 
